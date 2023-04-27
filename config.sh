@@ -1,9 +1,11 @@
 #!/bin/bash开头（指定解析器）
-LIB_HOME=$PWD/lib
-ROOT_DIR=$PWD
+
+CURRENT_DIR=$(cd $(dirname $0); pwd)
+LIB_HOME=$CURRENT_DIR/lib
+ROOT_DIR=$CURRENT_DIR
 main(){
-    #clean
-    #install_googletest
+    clean
+    install_googletest
     install_benchmark
 }
 clean(){
@@ -38,8 +40,7 @@ install_benchmark() {
     # cmake -DCMAKE_BUILD_TYPE=Release -S . -B "build"
     # Build the library.
     cmake --build "build" --config Release
-    echo hh
-    cp build/src/*.a $LIB_HOME
+    cp build/src/libbenchmark.a build/src/libbenchmark_main.a $LIB_HOME
 
 }
 
