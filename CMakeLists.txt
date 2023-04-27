@@ -19,6 +19,7 @@ set(ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 # 头文件查找目录
 include_directories(
     ${ROOT_DIR}/include
+    ${ROOT_DIR}/src/public
 )
 # 库文件查找目录
 link_directories(${ROOT_DIR}/lib)
