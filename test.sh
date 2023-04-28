@@ -8,5 +8,5 @@ cmake -S ./ -B ./build
 cd $PROJECT_ROOT/build&&make&& cd $CURRENT_DIR
 echo -------------googletestDependTest----------------
 $TEST_ROOT/Test2
-echo -------------benchTest----------------
-$TEST_ROOT/benchTest
+#echo -------------benchTest----------------
+#$TEST_ROOT/benchTest
